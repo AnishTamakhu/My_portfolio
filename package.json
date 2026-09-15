@@ -6,6 +6,7 @@
     "start": "serve -s . -l 3000"
   },
   "dependencies": {
-    "nodemailer": "^6.9.1"
+    "nodemailer": "^6.9.1",
+    "serve": "^14.2.4"
   }
 }
