@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="canonical" href="https://www.anishtamakhu.com.np/">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">MyPortfolio</div>
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#training">Training</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Hello, My name is Anish Tamakhu</h1>
+        <p>As a web developer, I love creating clean, functional, and user-friendly websites.</p>
+        <p><a class="cta" href="#projects">See my work</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>I’m <b>Anish Tamakhu</b>, a BIT graduate from <b>Aryan School of Engineering and Management</b>, graduating in 2026.</p>
+            <p>I’m passionate about <b>technology, AI/ML, and software development</b>, with an interest in building practical and user-friendly digital solutions. I enjoy working with modern web technologies, developing projects, and continuously learning new tools and frameworks.</p>
+            <p>I’m always eager to improve my technical skills, take on new challenges, and explore opportunities where I can contribute, learn, and grow as an IT professional.</p>
+          </div>
+          <div class="about-photo">
+            <img src="images/about.jpg" alt="Anish Tamakhu" class="profile-image">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="training" class="section">
+      <div class="container">
+        <h2>Training & Internship</h2>
+        <div class="training-grid">
+          <article class="training-card">
+            <div class="training-icon" aria-hidden="true"><i class="fa-solid fa-chart-column"></i></div>
+            <div>
+              <h3>Business Analysis</h3>
+              <p>I have completed <b>Business Analysis Training</b> at <b>Broadway Infosys</b>, Tinkune, Kathmandu, from 5 August to 17 August 2025, gaining practical knowledge of business requirements, process analysis, documentation, and Jira for project and task management.</p>
+              <button class="toggle-points" type="button" aria-expanded="false" aria-controls="business-analysis-points">Show details</button>
+              <ul id="business-analysis-points" class="training-points hidden">
+                <li>Gained knowledge of business analysis principles and techniques.</li>
+                <li>Learned to gather, analyze, and document business requirements.</li>
+                <li>Developed skills in requirement analysis and process documentation.</li>
+                <li>Understood business process modeling and workflow analysis.</li>
+                <li>Gained experience in preparing requirements and project documentation.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="training-card">
+            <div class="training-icon" aria-hidden="true"><i class="fa-solid fa-network-wired"></i></div>
+            <div>
+              <h3>CISCO Networking Training</h3>
+              <p>I have completed 21 hours of <b>Cisco Networking Training</b> at <b>Lava Pvt.Ltd</b>, gaining practical knowledge of networking fundamentals, Cisco devices, network configuration, and basic troubleshooting.</p>
+              <button class="toggle-points" type="button" aria-expanded="false" aria-controls="cisco-networking-points">Show details</button>
+              <ul id="cisco-networking-points" class="training-points hidden">
+                <li>Gained knowledge of networking fundamentals and concepts.</li>
+                <li>Learned to configure and troubleshoot Cisco devices.</li>
+                <li>Developed skills in network design and implementation.</li>
+                <li>Understood routing and switching principles.</li>
+                <li>Gained experience in basic network security measures.</li>
+              </ul>
+            </div>
+          </article>
+          <div class="training-card">
+            <div class="training-icon" aria-hidden="true"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h3>Internship</h3>
+              <p>I completed a 3-month <b>Information Technology</b> internship at <b>Youth Innovation Lab</b>, where I gained practical experience in web technologies, Python, and Django.</p>
+              <button class="toggle-points" type="button" aria-expanded="false" aria-controls="web-development-points">Show details</button>
+              <ul id="web-development-points" class="training-points hidden">
+                <li>Developed an understanding of Python programming and Object-Oriented Programming (OOP) concepts.</li>
+                <li>Learned the Django web framework and its Model-View-Template (MVT) architecture.</li>
+                <li>Gained knowledge of Django REST Framework (DRF), serializers, and API development.</li>
+                <li>Learned how to use Django ORM for database operations.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+          <li>HTML &amp; CSS</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Python &amp; Django</li>
+          <li>Django REST Framework (DRF)</li>
+          <li>React</li>
+          <li>Node.js &amp; Express</li>
+          <li>Version Control (Git)</li>
+          <li>SQL &amp; NoSQL</li>
+          
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <!-- <div class="projects-grid">
+          <article class="card">
+            <h3>Project One</h3>
+            <p>Short description of the project. Tech stack: HTML, CSS, JS.</p>
+            <p><a href="#" target="_blank" rel="noopener">View project</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Project Two</h3>
+            <p>Short description of the project. Add links to GitHub and live demo.</p>
+            <p><a href="#" target="_blank" rel="noopener">View project</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Project Three</h3>
+            <p>Another project example. Replace with your real projects.</p>
+            <p><a href="#" target="_blank" rel="noopener">View project</a></p>
+          </article> -->
+
+          <article class="card">
+            <h3>Todo List</h3>
+            <p>A responsive task manager with add, edit, delete, filtering, completion tracking. Built with HTML, CSS, and JavaScript.</p>
+            <p><a href="project/todo_list/index.html">Live demo</a> · <a href="https://github.com/AnishTamakhu/Todo_list" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="contact-intro">Want to work together? Contact with me using the form below.</p>
+        <form class="contact-form" action="#">
+          <label>
+            Name
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-socials" aria-label="Social links">
+        <a class="social-link github" href="https://github.com/AnishTamakhu" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a class="social-link email" href="mailto:anishtamakhu98@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+        <a class="social-link instagram" href="https://www.instagram.com/anishtamakhu" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+        <a class="social-link facebook" href="https://www.facebook.com/share/19Wm64My1a/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f" aria-hidden="true"></i></a>
+        <a class="social-link linkedin" href="https://www.linkedin.com/in/anish-tamakhu-b1aa9a234/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+        <a class="social-link website" href="https://www.anishtamakhu.com.np/" target="_blank" rel="noopener noreferrer" aria-label="Website"><i class="fa-solid fa-globe" aria-hidden="true"></i></a>
+      </div>
+      <h2>Anish Tamakhu</h2>
+      <p class="footer-tagline">Building practical, accessible, and user-friendly digital experiences.</p>
+      <div class="footer-contact">
+        <a href="mailto:anishtamakhu98@gmail.com">anishtamakhu98@gmail.com</a>
+        <a href="https://www.anishtamakhu.com.np/" target="_blank" rel="noopener noreferrer">www.anishtamakhu.com.np</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="year"></span> Anish Tamakhu. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=bd83269" defer></script>
+</body>
+</html>
