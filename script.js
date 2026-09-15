@@ -59,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function(){
     if (!form) return;
 
     const submitBtn = form.querySelector('button[type="submit"]');
-    const contactApiUrl = form.dataset.apiUrl || '/api/contact';
 
     function openEmailFallback(name, email, message) {
       const subject = encodeURIComponent(`Portfolio contact from ${name}`);
@@ -67,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function(){
       window.location.href = `mailto:anishtamakhu98@gmail.com?subject=${subject}&body=${body}`;
     }
 
-    form.addEventListener('submit', async function(e){
+    form.addEventListener('submit', function(e){
       e.preventDefault();
 
       const name = form.querySelector('input[name="name"]').value.trim();
@@ -79,41 +78,16 @@ document.addEventListener('DOMContentLoaded', function(){
         return;
       }
 
-      const payload = { name, email, message };
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Opening email...';
+      }
 
-      try {
-        if(submitBtn) {
-          submitBtn.disabled = true;
-          submitBtn.textContent = 'Sending...';
-        }
-
-        const resp = await fetch(contactApiUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-          credentials: 'omit'
-        });
-
-        const data = await resp.json().catch(() => ({}));
-
-        if (resp.status === 404) {
-          openEmailFallback(name, email, message);
-          return;
-        }
-
-        if (resp.ok && data.success) {
-          alert('Message sent — thank you!');
-          form.reset();
-        } else {
-          alert('Error sending message: ' + (data.error || resp.statusText || 'Unknown'));
-        }
-      } catch (err) {
-        openEmailFallback(name, email, message);
-      } finally {
-        if(submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Send';
-        }
+      openEmailFallback(name, email, message);
+      form.reset();
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send';
       }
     });
   })();
