@@ -10,7 +10,7 @@
 *{box-sizing:border-box}
 img{max-width:100%;display:block}
 button,input,textarea{font:inherit}
-html{scroll-behavior:smooth;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 html,body{height:100%}
 body{
   margin:0;
@@ -19,7 +19,10 @@ body{
   background:linear-gradient(180deg,#071023 0%,#0b1320 100%);
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
+a,button,input,textarea{ -webkit-tap-highlight-color: transparent; }
 .container{width:90%;max-width:var(--max-width);margin:0 auto}
 .site-header{
   position:sticky;top:0;z-index:40;background:rgba(6,10,18,0.55);backdrop-filter:blur(6px);
@@ -127,6 +130,20 @@ body{
   .profile-image{width:160px;height:160px}
   #contact{background-attachment:scroll; padding:2rem 0;}
   #about{padding:3rem 0;}
+  .site-header{padding-top: max(0.35rem, env(safe-area-inset-top, 0px));}
+  .site-footer{padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));}
+}
+
+@media only screen and (max-width:430px) and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (max-width:430px) and (min-resolution: 2dppx) {
+  .hero{padding-top:4.2rem;padding-bottom:3.3rem;min-height:calc(100svh - 58px)}
+  .hero h1{font-size:1.7rem}
+  .hero p{font-size:0.96rem;line-height:1.55}
+  .section{padding:2.2rem 0}
+  .container{width:calc(100% - 1.2rem)}
+  .nav a{min-height:44px;display:flex;align-items:center}
+  .contact-form{padding:0.9rem}
+  .social-link{width:40px;height:40px}
 }
 
 .projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
@@ -195,10 +212,26 @@ body{
   .contact-form input,.contact-form textarea{font-size:16px}
 }
 
+@media (max-width:480px){
+  .header-inner{padding:0.55rem 0}
+  .brand{font-size:0.95rem}
+  .hero{padding-top:5rem;padding-bottom:3.25rem}
+  .hero .container{transform:none}
+  .hero h1{font-size:clamp(1.7rem, 8vw, 2.2rem)}
+  .hero p{font-size:0.96rem}
+  .training-card{flex-direction:column;gap:0.75rem}
+  .training-icon{width:42px;height:42px}
+  .site-footer h2{font-size:1rem}
+  .footer-socials{gap:0.55rem}
+  .social-link{width:40px;height:40px}
+  .footer-contact{gap:0.35rem}
+}
+
 @media (max-width:420px){
   .brand{font-size:0.95rem}
   .hero h1{font-size:1.75rem}
   .profile-image{width:140px;height:140px}
+  .contact-form button{min-height:44px}
 }
 
 @media (max-width:600px){
